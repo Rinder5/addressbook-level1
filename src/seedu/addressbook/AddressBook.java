@@ -795,10 +795,10 @@ public class AddressBook {
      */
     private static boolean deletePersonFromAddressBook(String[] exactPerson) {
         final boolean isChanged = ALL_PERSONS.remove(exactPerson);
-        if (changed) {
+        if (isChanged) {
             savePersonsToFile(getAllPersonsInAddressBook(), storageFilePath);
         }
-        return changed;
+        return isChanged;
     }
 
     /**
